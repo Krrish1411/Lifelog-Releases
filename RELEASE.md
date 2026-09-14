@@ -88,7 +88,7 @@ Get-FileHash .\LifeLog-Setup-1.0.0.exe -Algorithm SHA256
 
 ## ☕ Support Independent Sovereign Software
 
-LifeLog is 100% free, private, and open-source under the MIT license, with zero ads, zero venture capital interference, and zero recurring paywalls. If LifeLog brings peace and clarity to your daily rhythm, please consider fueling future R&D:
+LifeLog is 100% free, private, sovereign software with zero ads, zero telemetry, zero venture capital interference, and zero recurring paywalls. If LifeLog brings peace and clarity to your daily rhythm, please consider fueling future R&D:
 
 **[☕ Buy Me a Coffee — Support LifeLog Development](https://buymeacoffee.com/Krrish1411)**
 
