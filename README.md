@@ -17,6 +17,10 @@
 
 **[🚀 Launch Live Web App](https://krrish1411.github.io/Lifelog-Releases/)** • **[📦 Download Desktop & Mobile](#-official-downloads)** • **[🛡️ Security Architecture](#-zero-cloud-sovereignty-guarantee)** • **[🐛 Report an Issue](https://github.com/Krrish1411/Lifelog-Releases/issues)**
 
+<br/>
+
+<img src="screenshot.png" alt="LifeLog Interface Preview" width="100%" style="border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.25);" />
+
 </div>
 
 ---
@@ -32,7 +36,7 @@ Download official, signed, standalone binaries for your operating system. Every 
 | **macOS** | `.dmg` | Universal (Apple Silicon & Intel) | [Download LifeLog DMG (macOS)](https://github.com/Krrish1411/Lifelog-Releases/releases/download/v1.0.0/LifeLog-1.0.0.dmg) |
 | **Linux** | `.AppImage` | Universal Linux Executable | [Download LifeLog AppImage (Linux)](https://github.com/Krrish1411/Lifelog-Releases/releases/download/v1.0.0/LifeLog-1.0.0.AppImage) |
 | **Android** | `.apk` | Arm64 Release APK | [Download LifeLog APK (Android)](https://github.com/Krrish1411/Lifelog-Releases/releases/download/v1.0.0/LifeLog-1.0.0.apk) |
-| **Web Browser** | WebApp | Zero Install Client PWA | [Open Sovereign Web App](https://krrish1411.github.io/Lifelog-Releases/) |
+| **Web Browser** | WebApp | Zero-Install Client PWA | [Open Sovereign Web App](https://krrish1411.github.io/Lifelog-Releases/) |
 
 > *Looking for historical versions, checksums, or changelogs? Browse the [All Releases Archive](https://github.com/Krrish1411/Lifelog-Releases/releases).*
 
@@ -45,7 +49,7 @@ LifeLog was engineered from the ground up to eliminate subscription fatigue, dat
 - **0 Outbound Telemetry:** Zero analytics SDKs, zero tracking pixels, zero tracking cookies. The app makes **zero outbound network requests on boot**.
 - **Native SQLite WAL Engine:** Desktop builds run on native `node:sqlite` (`DatabaseSync`) with Write-Ahead Logging (WAL) for sub-5ms ACID transactions and crash immunity.
 - **Hardware Device-Bound Cryptography:** Note bodies and private attachments are sealed using AES-256-GCM authenticated encryption derived from your hardware device key.
-- **Pure Peer-to-Peer DTLS Sync:** Synchronize laptops and mobile phones directly over local Wi-Fi via WebRTC DataChannels. No central cloud servers ever see, parse, or store your database.
+- **Pure Peer-to-Peer DTLS Sync:** Synchronize laptops and mobile phones directly over local Wi-Fi or WebRTC DataChannels. No central cloud servers ever see, parse, or store your database.
 - **Universal Transparent Backups:** 1-click portable `.lifelog` snapshot exports with zero cloud lock-in.
 
 ---
@@ -63,7 +67,7 @@ graph LR
 ```
 
 1. **Unified Task Agenda & Habits:** Multi-block timebox scheduling, hierarchical subtasks, recurrence engine (daily, weekly, monthly nth-weekday), and drag-to-tray unblocking.
-2. **Deep Focus Studio:** Pomodoro, Countdown, and Flow stopwatch timers paired with client-side synthesized soundscapes (Rain, Ocean Waves, White/Pink/Brown noise, Binaural beats) and honest pause auditing.
+2. **Deep Focus Studio:** Pomodoro, Countdown, and Flow stopwatch timers paired with client-side synthesized acoustic bell chimes, strict micro-pause auditing, and active task linkage.
 3. **Encrypted Second Brain (Notes):** Full Markdown canvas with dynamic `@tasks`, `#projects`, and `[[notes]]` autocomplete, folder hierarchy, and AES-256 client-side encryption.
 4. **Time-Grid Calendar:** Visual 24-hour day, 3-day, and week scheduling. Drag unscheduled tasks into time slots, and drag them back to the top tray anytime if plans change.
 5. **Habit Cadence & Streaks:** Daily and weekly target frequencies, automatic projection into Today tasks, and 12-week GitHub-style visual heatmaps.
@@ -80,6 +84,17 @@ Switch seamlessly between 5 complete ergonomic workspace engines to match your f
 - **Planify Clean (Minimalist):** Distraction-free split columns and focused task lists.
 - **Control Center:** Compact upper command strip with telemetry footer and rapid view switches.
 - **Zen Focus:** Ultra-clean canvas that hides all navigation chrome during active deep work.
+
+---
+
+## 🎭 6 Core Free Themes & Designer Pro Beta Preview
+
+LifeLog ships with **6 permanently free core themes** featuring 3 harmonized accent pairs:
+- **LifeLog Crimson** (Dark & Light) — Signature Crimson Red
+- **Warm Sepia** (Night & Paper) — Gentle Terracotta Amber
+- **Sage Garden** (Forest & Light) — Botanical Herbal Green
+
+Plus, enjoy full access to our **Pro Designer Boutique Themes** (OLED Pure Black, Tokyo Night/Day, Catppuccin Mocha/Latte, Nord Frost/Snow, Dracula Midnight) and custom font uploads unlocked free during the public beta.
 
 ---
 
