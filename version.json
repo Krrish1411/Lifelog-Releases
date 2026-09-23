@@ -2,12 +2,13 @@
   "version": "1.1.8",
   "releaseDate": "2026-09-23",
   "minRequiredVersion": "1.0.0",
+  "highlights": [
     "🔔 Android Active Lock Screen Notification: Upgraded to Active notification category (importance: 3, visibility: 1) with full lock screen visibility, 1-time arrival chime (setOnlyAlertOnce: true), and sticky pinned notification (ongoing: true)",
-    "📅 DayFlow Navigation & Dynamic Title: Grouped [< | Today | >] controls with live date range title that dynamically updates across Day, 3-Day, Week, Month, and Schedule views with glowing Today indicator",
-    "🗓️ DayFlow AllDayRow: Dedicated all-day row above timeline cleanly segregates all-day tasks and daily habits; 2-way drag-and-drop between all-day row and hourly timeline",
-    "🎨 DayFlow Event Card Design: 3.5px rounded vertical accent pill bar, translucent tinted card body, crisp 2-line title, and tabular time range",
+    "📅 Intuitive Navigation & Dynamic Date Header: Date range title centered directly between navigation arrows with a separate, prominent Today button and live range calculation across all views",
+    "🗓️ Multi-Day All-Day Milestone Stream: Dedicated all-day row above timeline reliably displays all-day tasks and daily habits across all visible dates with 1-click completion toggling",
+    "⚡ Direct Drag-to-Block Time Scheduler: Draw time blocks directly on empty grid slots with real-time translucent preview and 1-click task backlog assignment",
+    "📐 Precision Edge Duration Resizing: Smooth top and bottom drag-resizing with 15-minute snapping, overnight midnight overflow splitting, and suppressed accidental click modals",
     "🛡️ Ghost Lines & Accidental Click Suppression: Suppressed synthesized click events after drag or resize from opening task dialog; eliminated lingering dashed preview boxes on drag drop/cancel",
-    "📐 Isolated Block Duration Resizing: Duration resize strictly targets the active block (resizing.targetItemId) without block switching or global task edits",
     "🎨 Inter Normal Universal Default Font: Imported Inter (weights 400, 500, 600, 700) and set it as universal default typeface across the entire app",
     "⚡ Calendar-Day Startup Update Check: Checks for updates once per calendar day on first launch, consuming < 1 KB of data"
   ],
@@ -22,4 +23,3 @@
     "android": "https://github.com/Krrish1411/Lifelog-Releases/releases/latest/download/LifeLog-Android.apk"
   }
 }
-

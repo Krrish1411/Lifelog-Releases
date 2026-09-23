@@ -4,31 +4,41 @@
 
 Official release documentation and changelogs for **LifeLog** — the offline-first, zero-cloud personal operating system for tasks, notes, habits, and deep work.
 
-## 🌟 v1.1.8 — Active Lock Screen Notification & DayFlow Calendar Overhaul (2026-09-23)
+## 🌟 v1.1.8 — Active Lock Screen Notification & Fluid Calendar Grid Overhaul (2026-09-23)
 
 ### 🔔 1. Android Active Lock Screen Notification & 1-Time Alert Sound
 - **Active Notification Category:** Upgraded the running timer notification channel (`focus-running-active-v6`) to `importance: 3` (`IMPORTANCE_DEFAULT`) and `visibility: 1` (`VISIBILITY_PUBLIC`). The timer is now displayed in the Active/Alerting category rather than collapsed into the Silent bucket, ensuring full visibility on the Android Lock Screen.
 - **Single Chime Alert (`setOnlyAlertOnce: true`):** Enforced `mBuilder.setOnlyAlertOnce(true)` inside Kotlin `LocalNotificationManager.kt` via `scripts/patch-local-notifications.js`. Plays a single notification sound upon initial timer start and stays completely quiet during ongoing chronometer rendering and state updates.
 - **Sticky / Non-Removable (`ongoing: true`):** Configured with `ongoing: true`, `autoCancel: false`, `FLAG_ONGOING_EVENT`, and `FLAG_NO_CLEAR` so active deep work sessions cannot be accidentally dismissed.
 
-### 📅 2. DayFlow Navigation & Dynamic Title
-- **Grouped Navigation Controls:** Grouped `[ < | Today | > ]` into a segmented control directly alongside a prominent date range title.
-- **Dynamic Date Formatting:** Dynamically formats Day (`Wednesday, 23 September 2026`), 3-Day (`22 – 24 September 2026`), Week (`20 – 26 September 2026`), Month (`September 2026`), and Schedule views. Clicking previous/next immediately updates the title, and the Today button highlights when the current date is visible.
+### 📅 2. Intuitive View Navigation & Dynamic Date Header
+- **Date Title Between Arrows:** The date range title (e.g. `Mon 21 Sep — Sun 27 Sep`) is centered directly between the previous (`<`) and next (`>`) navigation arrows for clear, intuitive chronological browsing.
+- **Dedicated Today Button:** The `Today` button sits cleanly separate beside the navigation cluster with active glowing state when viewing the current period, jumping back to today on click.
+- **Dynamic Date Formatting:** Dynamically formats Day (`Wednesday, 23 September 2026`), 3-Day (`22 – 24 September 2026`), Week (`21 – 27 September 2026`), Month (`September 2026`), and Schedule views.
 
-### 🗓️ 3. DayFlow `AllDayRow` & Data Segregation
-- **Dedicated All-Day Grid Strip:** Added a synchronized all-day row above the hourly grid across Day, 3-Day, and Week views. All-day tasks and daily habits are cleanly separated from hourly slots.
-- **Seamless 2-Way Drag & Drop:** Dragging from the tray into the All-Day row schedules the item as an all-day task (`dueTime: null`). Dragging between the All-Day row and the timeline smoothly transitions between all-day and hourly scheduling.
+### 🗓️ 3. Multi-Day All-Day Milestone Stream & Complete Habit Coverage
+- **Complete Habit Population Across All Days:** Daily habits and all-day tasks reliably populate across every visible day in Day, 3-Day, Week, and Schedule views (resolving missing habits on future/past visible days).
+- **Dedicated All-Day Timeline Strip:** Positioned above the hourly timeline with a permanent `ALL-DAY` gutter label, 1-click completion toggling, and quick task creation.
+- **Seamless 2-Way Drag & Drop:** Dragging from the backlog tray into the All-Day row schedules the item as an all-day task (`dueTime: null`). Dragging between the All-Day row and hourly slots smoothly adjusts time.
 
-### 🎨 4. DayFlow Event Card Design & Resize Polish
-- **Modern Event Aesthetic:** 3.5px rounded vertical accent pill bar on the left, translucent tinted background (`color-mix`), subtle border, 2-line title, and tabular time range (`09:00 – 10:30 · 1h 30m`).
-- **Suppressed False Click Events (`justInteractedRef`):** Prevented synthesized click events after drag-and-drop or duration resizing from inadvertently opening the task edit modal.
-- **Isolated Duration Resizing:** Bottom-edge resize handles strictly target the specific block being stretched (`resizing.targetItemId === b.id`), eliminating block switching or global task edits.
-- **Ghost Line Elimination:** Cleared duration hover preview boxes immediately on drop, drag-leave, and drag-end.
+### ⚡ 4. Direct Drag-to-Block Time Scheduler & Task Integration
+- **Direct Drag-to-Create:** Mousedown and drag on any empty timeline slot draws an active translucent time block with live time/duration feedback (`14:00 – 15:30 · 1h 30m`).
+- **Quick Block Scheduler Modal:** On mouse release, opens an instant scheduler featuring:
+  1. *Backlog Task Quick-Pick:* 1-click assignment from unscheduled tasks.
+  2. *Quick New Task:* Title field with project picker and Enter-to-create.
+  3. *Instant Deep Focus:* 1-click session launch for the designated time block.
+- **Universal Enter Key Submission:** Pressing Enter in input fields or confirmation modals immediately saves/schedules.
 
-### 🎨 5. Universal Inter Normal Default Typography
+### 📐 5. Precision Edge Resizing & Overnight Midnight Splitting
+- **Dual Top & Bottom Edge Resizing:** Top handle adjusts start time earlier/later in 15m increments; bottom handle expands/contracts duration with live visual card feedback.
+- **Overnight Splitting Beyond 00:00:** Blocks extending past midnight clamp cleanly at 24:00 today and automatically start a continuation block on the following day at 00:00, preventing calendar grid overflow.
+- **Suppressed False Click Modals:** Event suppression ensures releasing a resize handle never triggers the task edit modal.
+- **Ghost Line Elimination:** Completely eliminated lingering dashed preview boxes on drag drop or cancel.
+
+### 🎨 6. Universal Inter Normal Default Typography
 - **Inter Font Integration:** Imported Google Fonts `Inter` (weights 400, 500, 600, 700) and set it as universal default across `--font-body` and `--font-display`.
 
-### ⚡ 6. Calendar-Day Startup Update Check (< 1 KB Bandwidth)
+### ⚡ 7. Calendar-Day Startup Update Check (< 1 KB Bandwidth)
 - **Once-per-Calendar-Day Check:** Update check runs once on the first app launch of each day, consuming < 1 KB of bandwidth and skipping subsequent opens.
 
 ---
