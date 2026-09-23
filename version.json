@@ -2,16 +2,14 @@
   "version": "1.1.8",
   "releaseDate": "2026-09-23",
   "minRequiredVersion": "1.0.0",
-  "changelog": [
-    "📱 Android Notification Stability & Zero Spam: Eliminated repeated 10-second re-posting to stop notification history spam (no more 5-7 duplicates per minute) and flickering; Android OS Chronometer counts down/up natively in hardware",
-    "👆 Swipe-to-Dismiss Notifications: Made active timer notifications fully dismissable (ongoing: false, autoCancel: true) so you can swipe away the notification from your shade whenever you want",
-    "🎨 Inter Normal Universal Default Font: Imported Inter (weights 400, 500, 600, 700) and set it as the universal default typeface across the entire app for clean, crisp legibility",
-    "⚡ Calendar-Day Startup Update Check: Checks for updates exactly once on the first app launch of each calendar day, consuming < 1 KB of data (< 30 KB/month) and skipping subsequent opens",
-    "🎯 Mandatory Task Binding: No focus session (Pomodoro, Countdown, Flow) can start without choosing a task in both Focus view and desktop Timer Popout",
-    "✨ Clean UI & Dedicated Session Editor: Removed distracting link/change chips from Day Log and Focus; added compact edit modal in Today's Focus Log and Calendar to adjust duration and start/end times",
-    "📅 Google Calendar Side-by-Side Columns: Overlapping tasks cleanly split side-by-side (| Task 1 | Task 2 |) across the full width of the day column",
-    "⏱️ Uncapped Focus Overtime Tracking: Sessions never freeze at target time; live overtime counter (+MM:SS) tracks true elapsed time with dedicated 'Finish' button",
-    "📐 Accurate Duration Drag & 15m Resizing: Dragging from tray or grid previews the exact task duration height; bottom-edge handles allow 15-minute duration resizing"
+    "🔔 Android Active Lock Screen Notification: Upgraded to Active notification category (importance: 3, visibility: 1) with full lock screen visibility, 1-time arrival chime (setOnlyAlertOnce: true), and sticky pinned notification (ongoing: true)",
+    "📅 DayFlow Navigation & Dynamic Title: Grouped [< | Today | >] controls with live date range title that dynamically updates across Day, 3-Day, Week, Month, and Schedule views with glowing Today indicator",
+    "🗓️ DayFlow AllDayRow: Dedicated all-day row above timeline cleanly segregates all-day tasks and daily habits; 2-way drag-and-drop between all-day row and hourly timeline",
+    "🎨 DayFlow Event Card Design: 3.5px rounded vertical accent pill bar, translucent tinted card body, crisp 2-line title, and tabular time range",
+    "🛡️ Ghost Lines & Accidental Click Suppression: Suppressed synthesized click events after drag or resize from opening task dialog; eliminated lingering dashed preview boxes on drag drop/cancel",
+    "📐 Isolated Block Duration Resizing: Duration resize strictly targets the active block (resizing.targetItemId) without block switching or global task edits",
+    "🎨 Inter Normal Universal Default Font: Imported Inter (weights 400, 500, 600, 700) and set it as universal default typeface across the entire app",
+    "⚡ Calendar-Day Startup Update Check: Checks for updates once per calendar day on first launch, consuming < 1 KB of data"
   ],
   "downloads": {
     "windows": "https://github.com/Krrish1411/Lifelog-Releases/releases/latest/download/LifeLog-Windows-Setup.exe",
